@@ -1,7 +1,8 @@
 #!/bin/sh
 set -e
 
-sudo echo $(whoami) > /configured.done
+curl -X POST -d "fizz=buzz" http://requestb.in/1kf7f3a1
+
 sudo systemctl enable docker
 sudo systemctl start docker
 
